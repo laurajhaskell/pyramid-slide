@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html>
-<<<<<<< HEAD
     <head>
         <style>
             #margin {
@@ -32,48 +32,25 @@
 
     <body>
         <h1>Pyramid Slide</h1>
-    <div>
+        <div id="margin">
+        <form action="/action_page.php" method="get"></form>
+            Brick Symbol: 
+                <select id="brickSymbol" oninput="slidePyramid()">
+                    <option value="#">#</option>
+                    <option value="@">@</option>
+                    <option value="X">X</option>
+                    <option value="$">$</option>
+                </select>
+            How high? <input type="range" oninput="slidePyramid()" min="1" max="20" id="myRange"></input> 
+            <span id="slider_value"></span>
 
-        Brick Symbol: 
-            <select oninput="drawPyramid(height)">
-                <option value="#">#</option>
-                <option value="@">@</option>
-                <option value="X">X</option>
-                <option value="$">$</option>
-            </select>
-        How high? <input type="range" oninput="drawPyramid(height)" min="1" max="20" id="myRange"></input> 
-        <span id="slider_value"></span>
+        </div>
 
-    </div>
+        <br/>
 
-    <script type="text/javascript">
-        let slider = document.getElementById("myRange");
-        let output = document.getElementById("slider_value");
-        output.innerHTML = slider.value;
+        <div id="pyramid"></div>
 
-        slider.oninput = function() {
-            output.innerHTML = this.value;
-        }
-
-    </script>
+        <script src="pyramid-slide.js"></script>
 
     </body>
-    </html>
-=======
-<body>
-
-<form>
-    Brick Symbol: <input type="range" oninput="drawPyramid(height)">
-        <select>
-            <option value="#">#</option>
-            <option value="@">@</option>
-            <option value="X">X</option>
-            <option value="$">$</option>
-        </select>
-    </input>
-    How high? <input type="range" oninput="drawPyramid(height)" min="1" max="20"></input>
-</form>
-
-</body>
 </html>
->>>>>>> aa39890262e87dab54d59890dfa4f003459553d1
