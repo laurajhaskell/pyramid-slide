@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            #margin {
+
+            }
+            #padding {
+
+            }
+            #color {
+
+            }
+            #background-color {
+
+            }
+            #border {
+
+            }
+            #border-radius {
+
+            }
+            #font-size {
+
+            }
+            #font-weight {
+                
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>Pyramid Slide</h1>
+    <div>
+
+        Brick Symbol: 
+            <select oninput="drawPyramid(height)">
+                <option value="#">#</option>
+                <option value="@">@</option>
+                <option value="X">X</option>
+                <option value="$">$</option>
+            </select>
+        How high? <input type="range" oninput="drawPyramid(height)" min="1" max="20" id="myRange"></input> 
+        <span id="slider_value"></span>
+
+    </div>
+
+    <script type="text/javascript">
+        let slider = document.getElementById("myRange");
+        let output = document.getElementById("slider_value");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+
+    </script>
+
+    </body>
+    </html>
