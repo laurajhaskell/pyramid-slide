@@ -2,53 +2,60 @@
 <html>
     <head>
         <style>
-            #margin {
+            h1 {
+                background-color: purple;
+                color: white;
+                font-size: 32px;
+                font-weight: 3px;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            div.inputFields {
+                background-color: grey;
+                align-content: center;
+                padding:30px 100px 30px 180px;
+            }
+            div.pyramidStyle {
+                color: purple;
+                padding: 30px 50px 30px 300px;
+            }
+            section.pyramidBackground {
+                background-color: lightgray;
+            }
+            #contentBorder {
+                border-style: solid;
+                border-radius: 5px;
+                border-color: purple;
+                margin: 20px 40px 20px 40px;
+            }
 
-            }
-            #padding {
-
-            }
-            #color {
-
-            }
-            #background-color {
-
-            }
-            #border {
-
-            }
-            #border-radius {
-
-            }
-            #font-size {
-
-            }
-            #font-weight {
-                
-            }
         </style>
 
     </head>
 
     <body>
         <h1>Pyramid Slide</h1>
-        <div id="margin">
-        <form action="/action_page.php" method="get"></form>
+
+        <section id="contentBorder">
+
+        <div class="inputFields">
             Brick Symbol: 
-                <select id="brickSymbol" oninput="slidePyramid()">
+                <select id="brickSymbol" onchange="slidePyramid()">
                     <option value="#">#</option>
                     <option value="@">@</option>
                     <option value="X">X</option>
                     <option value="$">$</option>
                 </select>
             How high? <input type="range" oninput="slidePyramid()" min="1" max="20" id="myRange"></input> 
-            <span id="slider_value"></span>
-
+            <span id="sliderValue"></span>
         </div>
 
-        <br/>
+        <section class="pyramidBackground">
+            <div id="pyramid" class="pyramidStyle"></div>
+        </section>
 
-        <div id="pyramid"></div>
+        </section>
 
         <script src="pyramid-slide.js"></script>
 
